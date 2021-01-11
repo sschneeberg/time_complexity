@@ -53,13 +53,10 @@ An example of a constant-time operation is accessing an element in an array.
 ### Quadratic time
 Consider the following code
 ```
-function timeExperiment(n) {
-  for (let i = 0; i < n; i++) {
-    for (let j = 0; j < n; j++) {
-      console.log(i, j)
-    }
-  }
-}
+def time_experiment(n):
+  for i in range(n):
+    for j in range(n):
+      print('hi')
 ```
 
 If n == 3, how many times will this log? What if n is 5? 10?
@@ -101,9 +98,9 @@ Special note: there are (many terrifying) categories that are worse than quadrat
 Note that for these, you should start by defining what's the variable workload (ie what does n represent) in each situation.
 
 1. Watering the plants in a garden (by hand, with a can)
-1. Watering the plants in a garden (with a dripline irrigation system) (<cite contributor="Matt">- Megs</cite>)
-1. Folding a piece of paper in half repeatedly
-1. Matching socks into pairs
+1. Watering the plants in a garden (with a dripline irrigation system)
+1. Folding a piece of paper in half repeatedly until it reaches the size of a credit card
+1. Matching socks into pairs after they come out of the dryer
 1. Opening a book to a specific page
 1. Finding a specific card in a shuffled deck of cards
 1. Finding a specific card in a sorted deck of cards (provided that you have a good definition of "sorted")
