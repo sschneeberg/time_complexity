@@ -5,17 +5,14 @@
 
 # Sample 1: twoSum([11, 2, 7, 15], 9) -> [1, 2]
 
-# O(n^2)
-def twoSum(arr, n):
-    if len(arr) < 2: raise ValueError("Array cannot be less than two values")
-    if len(arr) == 2: return [0,1] if arr[0] + arr[1] == n else []
-    newArr = arr
-    while len(newArr) > 0:
-        val = n - arr[i]
-        if val in set(arr[1:]): 
-            #find the index, return
-        newArr = newArr[1:]
-
 # O(n)
-def twoSum_faster(arr,n):
-    return
+def twoSum(arr,n):
+    val_dict = {}
+    for i in range(len(arr)): val_dict[str(arr[i])] = i
+    for key, index in val_dict.items():
+        val = str(n - int(key))
+        if val in val_dict and index != val_dict[val]: 
+            return[index, val_dict[val]]
+    return []
+
+assert(twoSum([11,2,7,15], 9) == [1,2])
